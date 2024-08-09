@@ -1,12 +1,44 @@
-<!-- hello-world.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello World</title>
+    <title>CBC Test Results</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            text-align: center;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+    </style>
 </head>
 <body>
-    <h1>Hello World</h1>
+    <h1>CBC Test Results</h1>
+    <pre id="cbc-results"></pre>
+    <script>
+        const cbcResults = {
+            "S. No.": 1.0,
+            "Age": 28.0,
+            "Sex": 0.0,
+            "RBC": 5.66,
+            "PCV": 34.0,
+            "MCV": 60.1,
+            "MCH": 17.0,
+            "MCHC": 28.2,
+            "RDW": 20.0,
+            "TLC": 11.1,
+            "PLT /mm3": 128.3,
+            "HGB": 9.6,
+            "Anemia": 1
+        };
+
+        document.getElementById('cbc-results').textContent = JSON.stringify(cbcResults, null, 2);
+    </script>
 </body>
 </html>
